@@ -5,15 +5,15 @@
 class SopdsGo < Formula
   desc "Self-hosted OPDS catalog server (Go rewrite of SOPDS)"
   homepage "https://github.com/dimgord/sopds-go"
-  version "1.3.0"
+  version "1.3.1"
   license "AGPL-3.0"
 
   depends_on "postgresql@16" => :recommended
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dimgord/sopds-go/releases/download/v1.3.0/sopds-go_1.3.0_macos_x86_64.tar.gz"
-      sha256 "8c33ff18b91eaf0d284433602ba5196ffd288fb7d863c0a32a49e253e17adc26"
+      url "https://github.com/dimgord/sopds-go/releases/download/v1.3.1/sopds-go_1.3.1_macos_x86_64.tar.gz"
+      sha256 "63f05a6722d706146656d5454a45f22d70a03e9978c00a84cdaf68db5517592f"
 
       define_method(:install) do
         bin.install "sopds"
@@ -23,8 +23,8 @@ class SopdsGo < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dimgord/sopds-go/releases/download/v1.3.0/sopds-go_1.3.0_macos_arm64.tar.gz"
-      sha256 "c436644cb3ffb16239a2f0df5c1171bd13cedb565bfe1354cc8ec5dc39d0cae6"
+      url "https://github.com/dimgord/sopds-go/releases/download/v1.3.1/sopds-go_1.3.1_macos_arm64.tar.gz"
+      sha256 "66806b298351b5fb9a594b799cc6186937ab144bae0de9a429da2f6186828c2e"
 
       define_method(:install) do
         bin.install "sopds"
@@ -37,8 +37,8 @@ class SopdsGo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dimgord/sopds-go/releases/download/v1.3.0/sopds-go_1.3.0_linux_x86_64.tar.gz"
-      sha256 "b9cb5c100e651d7425fbe8f3159742683830b9249722598e3b0b0f3279fcae58"
+      url "https://github.com/dimgord/sopds-go/releases/download/v1.3.1/sopds-go_1.3.1_linux_x86_64.tar.gz"
+      sha256 "2ab25ed615c37bec32e6b61a552345c7ac9a1b026fa142cd1ed22ad64d5b7b6c"
       define_method(:install) do
         bin.install "sopds"
         bin.install "zipdupes"
@@ -47,8 +47,8 @@ class SopdsGo < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dimgord/sopds-go/releases/download/v1.3.0/sopds-go_1.3.0_linux_arm64.tar.gz"
-      sha256 "09653cf1d434420732e9074437039a7590f20bd57dd4c0f78f65bf279a5205e1"
+      url "https://github.com/dimgord/sopds-go/releases/download/v1.3.1/sopds-go_1.3.1_linux_arm64.tar.gz"
+      sha256 "210ed434483aca35c088cfe569e475d7851bfe817f8d67f290e99bf8e8960044"
       define_method(:install) do
         bin.install "sopds"
         bin.install "zipdupes"
